@@ -1,6 +1,6 @@
 #include <catch2/catch_all.hpp>
 #include <FEXCore/Utils/Allocator.h>
-#include <corecrt_io.h>
+#include <unistd.h>
 
 namespace {
 
