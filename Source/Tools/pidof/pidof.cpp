@@ -7,6 +7,7 @@
 #include <fmt/format.h>
 #include <fstream>
 #include <string>
+#include <sstream>
 #include <unordered_set>
 
 namespace Config {
@@ -42,7 +43,8 @@ void LoadOptions(int argc, char** argv) {
   Separator = Options["d"];
 
   for (const auto& Omit : Options.all("o")) {
-    std::istringstream ss {Omit};
+    std::string s(Omit);
+    std::istringstream ss {s};
     std::string sub;
     while (std::getline(ss, sub, ',')) {
       int64_t pid;
