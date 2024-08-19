@@ -6,6 +6,8 @@
 
 #include <cstddef>
 
+#include <mutex>
+
 namespace FEX::LinuxEmulation::Threads {
 /**
  * @brief Size of the stack that this interface creates.
